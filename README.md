@@ -6,6 +6,7 @@ The gene list should be in .xlsx format with each condition occupying only one c
 This script Requires Perl and packages: gdata, vennerable and gplots.
 
 To install "vennerable" run the following commands:
+
    source("https://bioconductor.org/biocLite.R"); biocLite(c("RBGL","graph"))
    
    install.packages("devtools"); library(devtools);
