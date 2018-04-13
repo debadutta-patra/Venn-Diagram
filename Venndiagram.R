@@ -1,4 +1,4 @@
-#R-script for making un-weighted venn diagrams form upto 8 sets of gene lists.
+#R-script for making both weighted as well as unweighted venn diagrams form upto 8 sets of gene lists.
 #The gene list should be in .xlsx format with each condition occupying only one column)
 #Duplicate entries in each sets will be ignored.
 #Requires Perl and packages gdata, vennerable and gplots.
@@ -71,9 +71,16 @@ names(genelist) <- c(con)
 
 #Plotting the venn diagram and accesing the elements in each section of the diagram
 
+v <- readline("Do you want weighted venn diagram?(yes/no): ")
+if (v=="yes") {
+  v = TRUE
+}
+if (v=="no") {
+  v=FALSE
+}
 elementlist <- venn(genelist[1:y], show.plot=FALSE)
 
-plot(Venn(Sets = genelist[1:y]), doWeight = FALSE)
+plot(Venn(Sets = genelist[1:y]), doWeight = v)
 
 
 #Printing the elements list into a txt file
