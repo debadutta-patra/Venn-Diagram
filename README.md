@@ -1,7 +1,7 @@
 # Venn-Diagram
 Script for R. An automated way of plotting venn diagram (upto 8 sets) from a list of genes in xlsx format
 
-R-script for making un-weighted venn diagrams form upto 8 sets of gene lists.
+R-script for making weighted/unweighted venn diagrams form upto 8 sets of gene lists.
 The gene list should be in .xlsx format with each condition occupying only one column. Duplicate entries in each sets will be ignored.Do not keep any headers mentioning the set name. the file should not contain anything other than the gene list.
 This script Requires Perl and packages: gdata, vennerable and gplots.
 
